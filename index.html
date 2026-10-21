@@ -1,0 +1,224 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CS Creative Studio | Digital Art & Design</title>
+  <meta name="description" content="Explore digital art, graphic design, branding and mystical Tarot and Oracle card designs by CS Creative Studio.">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: #080d1b;
+      color: #f7f2ff;
+      font-family: Arial, sans-serif;
+      line-height: 1.7;
+    }
+    a { color: inherit; text-decoration: none; }
+    header {
+      padding: 22px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      border-bottom: 1px solid #28314b;
+    }
+    .logo {
+      font-size: 25px;
+      font-weight: bold;
+      background: linear-gradient(90deg,#ff6aaf,#9d8aff,#63e7e1);
+      background-clip: text;
+      color: transparent;
+    }
+    nav { display: flex; gap: 20px; flex-wrap: wrap; }
+    nav a { font-size: 14px; color: #d5d8ec; }
+    nav a:hover { color: #ff83c2; }
+    .hero {
+      min-height: 440px;
+      padding: 90px 8%;
+      background:
+        radial-gradient(ellipse at 85% 20%,#54266c 0,transparent 38%),
+        radial-gradient(ellipse at 70% 90%,#124f69 0,transparent 40%),
+        #080d1b;
+    }
+    .eyebrow { color: #66e8e2; letter-spacing: 4px; font-size: 12px; }
+    h1 {
+      font-size: clamp(40px,7vw,76px);
+      line-height: 1.1;
+      margin: 20px 0;
+      max-width: 780px;
+    }
+    .gradient {
+      background: linear-gradient(90deg,#ff6db1,#a68aff,#66e6e0);
+      background-clip: text;
+      color: transparent;
+    }
+    .hero p { max-width: 600px; color: #c7cce0; }
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 12px 24px;
+      border-radius: 30px;
+      background: linear-gradient(90deg,#f04b9b,#7957ee);
+      font-weight: bold;
+    }
+    section { padding: 65px 8%; }
+    .section-title { font-size: 34px; margin-bottom: 10px; }
+    .sub { color: #aeb8d3; margin-bottom: 28px; }
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+      gap: 15px;
+    }
+    .skill {
+      padding: 22px;
+      border: 1px solid #303956;
+      border-radius: 14px;
+      background: #11182a;
+    }
+    .skill span { font-size: 26px; }
+    .skill h3 { font-size: 16px; margin-top: 8px; }
+    #portfolio { background: #f6f2f9; color: #14162b; }
+    #portfolio .sub { color: #65677b; }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+      gap: 22px;
+    }
+    .project {
+      overflow: hidden;
+      background: white;
+      border-radius: 14px;
+      box-shadow: 0 8px 25px #17102a12;
+    }
+    .art {
+      min-height: 190px;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 20px;
+      font-size: 48px;
+      background: linear-gradient(135deg,#182a46,#7c398a,#f49aaf);
+    }
+    .art.two { background: linear-gradient(135deg,#102c30,#247d76,#e5ba65); }
+    .art.three { background: linear-gradient(135deg,#12152d,#4e378a,#e6a0d1); }
+    .art.four { background: linear-gradient(135deg,#38223b,#cf695d,#f1cb80); }
+    .project-info { padding: 18px; }
+    .project-info p { color: #66677a; font-size: 14px; }
+    .notice { font-size: 13px; color: #777084; margin-top: 20px; }
+    #about p { max-width: 750px; color: #c7cce0; }
+    #contact {
+      text-align: center;
+      background: linear-gradient(120deg,#15162e,#26304c,#40254e);
+    }
+    footer {
+      padding: 22px 8%;
+      text-align: center;
+      color: #aeb8d3;
+      font-size: 13px;
+    }
+    @media(max-width:600px) {
+      header { padding: 18px 5%; }
+      nav { gap: 12px; }
+      section { padding: 48px 6%; }
+      .hero { padding: 70px 6%; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="logo" href="#home">✦ CS Creative Studio</a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#skills">Skills</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="eyebrow">WELCOME TO MY CREATIVE WORLD</div>
+      <h1>Ideas Become <span class="gradient">Art & Magic.</span></h1>
+      <p>
+        Welcome to CS Creative Studio — a creative space for digital art,
+        imaginative visuals, unique branding, and mystical Tarot & Oracle
+        card designs.
+      </p>
+      <a class="btn" href="#portfolio">Explore My Work ↗</a>
+    </section>
+
+    <section id="skills">
+      <h2 class="section-title">My <span class="gradient">Creative Skills</span></h2>
+      <p class="sub">Turning ideas into meaningful visual experiences.</p>
+      <div class="skills">
+        <div class="skill"><span>🎨</span><h3>Digital Art</h3></div>
+        <div class="skill"><span>✨</span><h3>AI Image Design</h3></div>
+        <div class="skill"><span>✒️</span><h3>Logo Design</h3></div>
+        <div class="skill"><span>🖌️</span><h3>Graphic Design</h3></div>
+        <div class="skill"><span>🌙</span><h3>Tarot & Oracle Cards</h3></div>
+      </div>
+    </section>
+
+    <section id="portfolio">
+      <h2 class="section-title">Featured <span class="gradient">Creations</span></h2>
+      <p class="sub">A selection of creative work from my studio.</p>
+      <div class="projects">
+        <article class="project">
+          <div class="art">✦</div>
+          <div class="project-info">
+            <h3>Digital Art</h3>
+            <p>Fantasy, imagination and digital illustration.</p>
+          </div>
+        </article>
+        <article class="project">
+          <div class="art two">❋</div>
+          <div class="project-info">
+            <h3>Logo Design</h3>
+            <p>Distinctive visual identities for creative brands.</p>
+          </div>
+        </article>
+        <article class="project">
+          <div class="art three">☾</div>
+          <div class="project-info">
+            <h3>Tarot & Oracle</h3>
+            <p>Mystical artwork and imaginative card concepts.</p>
+          </div>
+        </article>
+        <article class="project">
+          <div class="art four">✧</div>
+          <div class="project-info">
+            <h3>Graphic Design</h3>
+            <p>Creative layouts, posters and visual concepts.</p>
+          </div>
+        </article>
+      </div>
+      <p class="notice">These are temporary placeholders. Replace them with your own designs before sharing your portfolio with clients.</p>
+    </section>
+
+    <section id="about">
+      <h2 class="section-title">About <span class="gradient">My Studio</span></h2>
+      <p>
+        I am a digital artist and designer passionate about creating
+        imaginative artwork, distinctive logos, graphic designs, and
+        mystical Tarot & Oracle card illustrations. My goal is to bring
+        ideas to life through thoughtful, original visual design.
+      </p>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title">Let's Create <span class="gradient">Together!</span></h2>
+      <p>Have a project in mind? I would love to hear about it.</p>
+      <a class="btn" href="mailto:YOUR_EMAIL@example.com">Contact Me ✉</a>
+      <p class="notice">Replace the example email with your real contact email.</p>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 CS Creative Studio. All rights reserved.
+  </footer>
+</body>
+</html>
