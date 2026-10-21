@@ -4,225 +4,1080 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CS Creative Studio | Digital Art & Design</title>
-  <meta name="description" content="Explore digital art, graphic design, branding and mystical Tarot and Oracle card designs by CS Creative Studio.">
+
+  <title>CS Creative Studio | Creative Design Portfolio</title>
+
+  <meta name="description" content="Explore creative artwork, packaging, book covers, card decks and logo design by CS Creative Studio.">
+
+  <meta name="theme-color" content="#0b1020">
+
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+    :root {
+      --bg: #0b1020;
+      --surface: #111a2d;
+      --surface-light: #17233a;
+      --text: #f4f7fc;
+      --muted: #a8b3c8;
+      --accent: #62e5df;
+      --accent-dark: #1aacae;
+      --border: rgba(255,255,255,0.10);
+      --gold: #d9b878;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 85px;
+    }
+
     body {
-      background: #080d1b;
-      color: #f7f2ff;
-      font-family: Arial, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
       line-height: 1.7;
     }
-    a { color: inherit; text-decoration: none; }
-    header {
-      padding: 22px 8%;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button, a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: auto;
+    }
+
+    .section {
+      padding: 90px 0;
+    }
+
+    .section-label {
+      color: var(--accent);
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: clamp(30px, 4vw, 43px);
+      line-height: 1.2;
+      margin-bottom: 16px;
+      letter-spacing: -1px;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      max-width: 620px;
+      margin-bottom: 35px;
+    }
+
+    .accent {
+      color: var(--accent);
+    }
+
+    /* NAVIGATION */
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11,16,32,0.94);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      min-height: 76px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
       gap: 20px;
-      flex-wrap: wrap;
-      border-bottom: 1px solid #28314b;
     }
-    .logo {
-      font-size: 25px;
+
+    .brand {
+      font-size: 21px;
+      font-weight: 800;
+      letter-spacing: -0.7px;
+      white-space: nowrap;
+    }
+
+    .brand span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      list-style: none;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    .nav-cta {
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      border-radius: 7px;
+      padding: 9px 16px;
+      font-size: 13px;
       font-weight: bold;
-      background: linear-gradient(90deg,#ff6aaf,#9d8aff,#63e7e1);
-      background-clip: text;
-      color: transparent;
+      white-space: nowrap;
     }
-    nav { display: flex; gap: 20px; flex-wrap: wrap; }
-    nav a { font-size: 14px; color: #d5d8ec; }
-    nav a:hover { color: #ff83c2; }
-    .hero {
-      min-height: 440px;
-      padding: 90px 8%;
-      background:
-        radial-gradient(ellipse at 85% 20%,#54266c 0,transparent 38%),
-        radial-gradient(ellipse at 70% 90%,#124f69 0,transparent 40%),
-        #080d1b;
+
+    .nav-cta:hover {
+      background: var(--accent);
+      color: var(--bg);
     }
-    .eyebrow { color: #66e8e2; letter-spacing: 4px; font-size: 12px; }
-    h1 {
-      font-size: clamp(40px,7vw,76px);
-      line-height: 1.1;
-      margin: 20px 0;
-      max-width: 780px;
-    }
-    .gradient {
-      background: linear-gradient(90deg,#ff6db1,#a68aff,#66e6e0);
-      background-clip: text;
-      color: transparent;
-    }
-    .hero p { max-width: 600px; color: #c7cce0; }
+
+    /* BUTTONS */
+
     .btn {
-      display: inline-block;
-      margin-top: 25px;
-      padding: 12px 24px;
-      border-radius: 30px;
-      background: linear-gradient(90deg,#f04b9b,#7957ee);
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      padding: 13px 21px;
+      border-radius: 7px;
       font-weight: bold;
+      font-size: 14px;
+      border: 1px solid var(--accent);
+      transition: 0.2s ease;
+      cursor: pointer;
     }
-    section { padding: 65px 8%; }
-    .section-title { font-size: 34px; margin-bottom: 10px; }
-    .sub { color: #aeb8d3; margin-bottom: 28px; }
-    .skills {
+
+    .btn-primary {
+      background: var(--accent);
+      color: #07131d;
+    }
+
+    .btn-primary:hover {
+      background: #9af5ef;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      color: var(--text);
+      border-color: var(--border);
+      background: transparent;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    /* HERO */
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 115px 0 100px;
+      background:
+        radial-gradient(ellipse at 80% 25%, rgba(48,180,185,0.13), transparent 35%),
+        radial-gradient(ellipse at 15% 85%, rgba(83,101,190,0.12), transparent 40%);
+    }
+
+    .hero-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+      grid-template-columns: 1.25fr 0.75fr;
+      align-items: center;
+      gap: 55px;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      border: 1px solid rgba(98,229,223,0.3);
+      background: rgba(98,229,223,0.06);
+      color: var(--accent);
+      padding: 7px 13px;
+      border-radius: 30px;
+      font-size: 12px;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 {
+      font-size: clamp(43px, 6.5vw, 76px);
+      line-height: 1.08;
+      letter-spacing: -3px;
+      margin-bottom: 24px;
+    }
+
+    .hero-description {
+      max-width: 560px;
+      color: var(--muted);
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .hero-note {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 27px;
+    }
+
+    .hero-art {
+      min-height: 330px;
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 25px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 50% 40%, rgba(98,229,223,0.16), transparent 42%),
+        linear-gradient(145deg, #172941, #101729 70%);
+    }
+
+    .hero-art::before,
+    .hero-art::after {
+      content: "";
+      position: absolute;
+      border: 1px solid rgba(98,229,223,0.18);
+      border-radius: 50%;
+      width: 230px;
+      height: 230px;
+      left: 50%;
+      top: 43%;
+      transform: translate(-50%, -50%);
+    }
+
+    .hero-art::after {
+      width: 165px;
+      height: 165px;
+      border-color: rgba(217,184,120,0.4);
+    }
+
+    .hero-symbol {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      margin: auto;
+      font-size: 100px;
+      line-height: 1.2;
+      color: var(--gold);
+      text-shadow: 0 0 45px rgba(98,229,223,0.2);
+    }
+
+    .hero-art-caption {
+      position: relative;
+      z-index: 1;
+      border-top: 1px solid var(--border);
+      padding-top: 15px;
+      color: var(--muted);
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+
+    /* SKILLS */
+
+    .skills-section {
+      background: #0e1526;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
       gap: 15px;
     }
-    .skill {
-      padding: 22px;
-      border: 1px solid #303956;
-      border-radius: 14px;
-      background: #11182a;
+
+    .skill-card {
+      padding: 24px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      border-radius: 12px;
+      transition: 0.2s;
     }
-    .skill span { font-size: 26px; }
-    .skill h3 { font-size: 16px; margin-top: 8px; }
-    #portfolio { background: #f6f2f9; color: #14162b; }
-    #portfolio .sub { color: #65677b; }
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
-      gap: 22px;
+
+    .skill-card:hover {
+      border-color: rgba(98,229,223,0.45);
+      transform: translateY(-3px);
     }
-    .project {
-      overflow: hidden;
-      background: white;
-      border-radius: 14px;
-      box-shadow: 0 8px 25px #17102a12;
+
+    .skill-number {
+      font-size: 12px;
+      color: var(--accent);
+      letter-spacing: 2px;
+      margin-bottom: 12px;
     }
-    .art {
-      min-height: 190px;
-      display: grid;
-      place-items: center;
-      text-align: center;
-      padding: 20px;
-      font-size: 48px;
-      background: linear-gradient(135deg,#182a46,#7c398a,#f49aaf);
+
+    .skill-card h3 {
+      font-size: 17px;
+      margin-bottom: 8px;
     }
-    .art.two { background: linear-gradient(135deg,#102c30,#247d76,#e5ba65); }
-    .art.three { background: linear-gradient(135deg,#12152d,#4e378a,#e6a0d1); }
-    .art.four { background: linear-gradient(135deg,#38223b,#cf695d,#f1cb80); }
-    .project-info { padding: 18px; }
-    .project-info p { color: #66677a; font-size: 14px; }
-    .notice { font-size: 13px; color: #777084; margin-top: 20px; }
-    #about p { max-width: 750px; color: #c7cce0; }
-    #contact {
-      text-align: center;
-      background: linear-gradient(120deg,#15162e,#26304c,#40254e);
-    }
-    footer {
-      padding: 22px 8%;
-      text-align: center;
-      color: #aeb8d3;
+
+    .skill-card p {
+      color: var(--muted);
       font-size: 13px;
     }
-    @media(max-width:600px) {
-      header { padding: 18px 5%; }
-      nav { gap: 12px; }
-      section { padding: 48px 6%; }
-      .hero { padding: 70px 6%; }
+
+    /* PORTFOLIO */
+
+    .portfolio-section {
+      background: var(--bg);
+    }
+
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-bottom: 32px;
+    }
+
+    .filter-btn {
+      border: 1px solid var(--border);
+      color: var(--muted);
+      background: var(--surface);
+      border-radius: 30px;
+      padding: 9px 15px;
+      cursor: pointer;
+      font-size: 12px;
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      color: #07131d;
+      background: var(--accent);
+      border-color: var(--accent);
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .project-card {
+      min-width: 0;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 13px;
+      background: var(--surface);
+      transition: transform 0.25s, border-color 0.25s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(98,229,223,0.5);
+    }
+
+    .project-card[hidden] {
+      display: none;
+    }
+
+    .project-art {
+      min-height: 205px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .project-art::before,
+    .project-art::after {
+      content: "";
+      position: absolute;
+      width: 135px;
+      height: 135px;
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 50%;
+    }
+
+    .project-art::after {
+      width: 95px;
+      height: 95px;
+    }
+
+    .art-symbol {
+      position: relative;
+      z-index: 1;
+      font-size: 65px;
+      line-height: 1;
+      text-shadow: 0 5px 30px rgba(0,0,0,0.25);
+    }
+
+    .art-box {
+      background: linear-gradient(140deg, #254b50, #162633);
+    }
+
+    .art-book {
+      background: linear-gradient(140deg, #75513d, #30263a);
+    }
+
+    .art-poker {
+      background: linear-gradient(140deg, #304d47, #172c32);
+    }
+
+    .art-oracle {
+      background: linear-gradient(140deg, #3d3268, #171d3c);
+    }
+
+    .art-tarot {
+      background: linear-gradient(140deg, #57406b, #241a3e);
+    }
+
+    .art-logo {
+      background: linear-gradient(140deg, #3c536d, #18283c);
+    }
+
+    .project-info {
+      padding: 20px;
+    }
+
+    .project-category {
+      color: var(--accent);
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 7px;
+    }
+
+    .project-info h3 {
+      font-size: 17px;
+      margin-bottom: 7px;
+    }
+
+    .project-info p {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .project-status {
+      display: inline-block;
+      color: var(--muted);
+      font-size: 10px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 4px 9px;
+      margin-top: 13px;
+    }
+
+    /* ABOUT */
+
+    .about-section {
+      background: #0e1526;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 55px;
+      align-items: start;
+    }
+
+    .about-panel {
+      padding: 30px;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      background:
+        radial-gradient(circle at top right, rgba(98,229,223,0.1), transparent 45%),
+        var(--surface);
+    }
+
+    .about-monogram {
+      font-size: 48px;
+      font-weight: 800;
+      letter-spacing: -3px;
+      margin-bottom: 15px;
+    }
+
+    .about-monogram span {
+      color: var(--accent);
+    }
+
+    .about-panel p,
+    .about-copy p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .about-copy p {
+      margin-bottom: 17px;
+    }
+
+    .about-list {
+      list-style: none;
+      margin-top: 22px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .about-list li {
+      font-size: 14px;
+    }
+
+    .about-list li::before {
+      content: "✓";
+      color: var(--accent);
+      margin-right: 11px;
+      font-weight: bold;
+    }
+
+    /* CONTACT */
+
+    .contact-section {
+      background:
+        radial-gradient(ellipse at 50% 100%, rgba(98,229,223,0.08), transparent 55%),
+        var(--bg);
+    }
+
+    .contact-panel {
+      border: 1px solid var(--border);
+      background: var(--surface);
+      border-radius: 18px;
+      padding: clamp(25px, 5vw, 55px);
+      text-align: center;
+    }
+
+    .contact-panel .section-intro {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .contact-details {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin: 25px 0;
+    }
+
+    .contact-item {
+      border: 1px solid var(--border);
+      padding: 12px 17px;
+      border-radius: 8px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .social-links a {
+      border: 1px solid var(--border);
+      border-radius: 7px;
+      padding: 9px 15px;
+      color: var(--muted);
+      font-size: 12px;
+      transition: 0.2s;
+    }
+
+    .social-links a:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
+    .contact-note {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 20px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 25px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .footer-inner a {
+      color: var(--accent);
+    }
+
+    @media (max-width: 850px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .hero-art {
+        min-height: 260px;
+      }
+
+      .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .nav-links {
+        gap: 14px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .container {
+        width: 91%;
+      }
+
+      .section {
+        padding: 65px 0;
+      }
+
+      .nav-inner {
+        padding: 14px 0;
+        align-items: flex-start;
+        flex-wrap: wrap;
+      }
+
+      .nav-links {
+        order: 3;
+        width: 100%;
+        overflow-x: auto;
+        padding: 7px 0;
+        gap: 20px;
+      }
+
+      .nav-cta {
+        margin-left: auto;
+      }
+
+      .hero {
+        padding: 75px 0 65px;
+      }
+
+      .hero h1 {
+        letter-spacing: -2px;
+      }
+
+      .hero-description {
+        font-size: 14px;
+      }
+
+      .portfolio-grid,
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .project-art {
+        min-height: 225px;
+      }
+
+      .hero-art {
+        min-height: 240px;
+      }
+
+      .about-panel {
+        padding: 23px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
   </style>
 </head>
+
 <body>
-  <header>
-    <a class="logo" href="#home">✦ CS Creative Studio</a>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#skills">Skills</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
+
+  <!-- NAVIGATION -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="#home">CS <span>CREATIVE</span></a>
+
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Replace YOUR_EMAIL@example.com with your real email -->
+      <a class="nav-cta" href="mailto:YOUR_EMAIL@example.com?subject=Design%20Inquiry">
+        Hire Me ↗
+      </a>
+    </div>
   </header>
 
   <main>
+
+    <!-- HOME -->
     <section class="hero" id="home">
-      <div class="eyebrow">WELCOME TO MY CREATIVE WORLD</div>
-      <h1>Ideas Become <span class="gradient">Art & Magic.</span></h1>
-      <p>
-        Welcome to CS Creative Studio — a creative space for digital art,
-        imaginative visuals, unique branding, and mystical Tarot & Oracle
-        card designs.
-      </p>
-      <a class="btn" href="#portfolio">Explore My Work ↗</a>
-    </section>
+      <div class="container hero-grid">
 
-    <section id="skills">
-      <h2 class="section-title">My <span class="gradient">Creative Skills</span></h2>
-      <p class="sub">Turning ideas into meaningful visual experiences.</p>
-      <div class="skills">
-        <div class="skill"><span>🎨</span><h3>Digital Art</h3></div>
-        <div class="skill"><span>✨</span><h3>Die-Cut Box Design</h3></div>
-        <div class="skill"><span>✒️</span><h3>Logo Design</h3></div>
-        <div class="skill"><span>🖌️</span><h3>Graphic Design</h3></div>
-        <div class="skill"><span>🌙</span><h3>Tarot & Oracle Cards</h3></div>
+        <div>
+          <span class="hero-badge">CREATIVE DESIGN PORTFOLIO</span>
+
+          <h1>
+            Creative Designs.<br>
+            <span class="accent">Unique Ideas.</span>
+          </h1>
+
+          <p class="hero-description">
+            Welcome to CS Creative Studio — a creative space for
+            distinctive visual design, book covers, product packaging,
+            collectible card decks and original logo concepts.
+          </p>
+
+          <div class="hero-buttons">
+            <a class="btn btn-primary" href="#portfolio">
+              Explore My Work ↗
+            </a>
+
+            <a class="btn btn-outline"
+               href="mailto:YOUR_EMAIL@example.com?subject=Design%20Inquiry">
+              Hire Me
+            </a>
+          </div>
+
+          <p class="hero-note">
+            DIGITAL ART · GRAPHIC DESIGN · CARD DECKS · BRANDING
+          </p>
+        </div>
+
+        <div class="hero-art" aria-label="Creative Studio decorative artwork">
+          <div class="hero-symbol">✳</div>
+          <div class="hero-art-caption">
+            IDEAS INTO VISUAL EXPERIENCES
+          </div>
+        </div>
+
       </div>
     </section>
 
-    <section id="portfolio">
-      <h2 class="section-title">Featured <span class="gradient">Creations</span></h2>
-      <p class="sub">A selection of creative work from my studio.</p>
-      <div class="projects">
-        <article class="project">
-          
-<img src="images/profile%20pic.jpg" alt="CS Creative Studio Design" style="width:100%; height:auto;">
+    <!-- SKILLS -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
 
-     alt="Tarot Card Design"
-     style="width:100%; height:220px; object-fit:cover;">
-          <div class="project-info">
-            <h3>Digital Art</h3>
-            <p>Fantasy, imagination and digital illustration.</p>
-          </div>
-        </article>
-        <article class="project">
-          <div class="art two">❋</div>
-          <div class="project-info">
+        <p class="section-label">What I Create</p>
+        <h2 class="section-title">My Creative Skills</h2>
+        <p class="section-intro">
+          Creative design solutions for distinctive projects,
+          meaningful ideas and memorable visual experiences.
+        </p>
+
+        <div class="skills-grid">
+
+          <article class="skill-card">
+            <div class="skill-number">01 / PACKAGING</div>
+            <h3>Die-Cut Box Design</h3>
+            <p>Creative packaging artwork and box design concepts.</p>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-number">02 / PUBLISHING</div>
+            <h3>Book Cover Design</h3>
+            <p>Front, back and complete book cover artwork.</p>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-number">03 / PLAYING CARDS</div>
+            <h3>Poker Card Design</h3>
+            <p>Custom playing card faces, backs and deck concepts.</p>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-number">04 / ORACLE</div>
+            <h3>Oracle Card Design</h3>
+            <p>Distinctive oracle card illustrations and deck artwork.</p>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-number">05 / TAROT</div>
+            <h3>Tarot Card Design</h3>
+            <p>Fantasy-inspired tarot illustrations and card sets.</p>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-number">06 / BRANDING</div>
             <h3>Logo Design</h3>
-            <p>Distinctive visual identities for creative brands.</p>
-          </div>
-        </article>
-        <article class="project">
-          <div class="art three">☾</div>
-          <div class="project-info">
-            <h3>Tarot & Oracle</h3>
-            <p>Mystical artwork and imaginative card concepts.</p>
-          </div>
-        </article>
-        <article class="project">
-          <div class="art four">✧</div>
-          <div class="project-info">
-            <h3>Graphic Design</h3>
-            <p>Creative layouts, posters and visual concepts.</p>
-          </div>
-        </article>
+            <p>Original logo concepts and visual brand identities.</p>
+          </article>
+
+        </div>
       </div>
-      <p class="notice">These are temporary placeholders. Replace them with your own designs before sharing your portfolio with clients.</p>
     </section>
 
-    <section id="about">
-      <h2 class="section-title">About <span class="gradient">My Studio</span></h2>
-      <p>
-        I am a digital artist and designer passionate about creating
-        imaginative artwork, distinctive logos, graphic designs, and
-        mystical Tarot & Oracle card illustrations. My goal is to bring
-        ideas to life through thoughtful, original visual design.
-      </p>
+    <!-- PORTFOLIO -->
+    <section class="section portfolio-section" id="portfolio">
+      <div class="container">
+
+        <p class="section-label">Selected Projects</p>
+        <h2 class="section-title">My Portfolio</h2>
+        <p class="section-intro">
+          Explore my creative projects by category. Artwork images
+          will be added here as the portfolio develops.
+        </p>
+
+        <div class="filters" role="group" aria-label="Filter portfolio projects">
+          <button class="filter-btn active" data-filter="all" aria-pressed="true">All Projects</button>
+          <button class="filter-btn" data-filter="box" aria-pressed="false">Box Design</button>
+          <button class="filter-btn" data-filter="book" aria-pressed="false">Book Covers</button>
+          <button class="filter-btn" data-filter="poker" aria-pressed="false">Poker Cards</button>
+          <button class="filter-btn" data-filter="oracle" aria-pressed="false">Oracle Cards</button>
+          <button class="filter-btn" data-filter="tarot" aria-pressed="false">Tarot Cards</button>
+          <button class="filter-btn" data-filter="logo" aria-pressed="false">Logo Design</button>
+        </div>
+
+        <div class="portfolio-grid">
+
+          <article class="project-card" data-category="box">
+            <div class="project-art art-box">
+              <span class="art-symbol" aria-hidden="true">◇</span>
+            </div>
+            <div class="project-info">
+              <div class="project-category">Packaging</div>
+              <h3>Die-Cut Box Design</h3>
+              <p>Product packaging and creative box artwork.</p>
+              <span class="project-status">Artwork coming soon</span>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="book">
+            <div class="project-art art-book">
+              <span class="art-symbol" aria-hidden="true">▤</span>
+            </div>
+            <div class="project-info">
+              <div class="project-category">Publishing</div>
+              <h3>Book Cover Design</h3>
+              <p>Book cover concepts and visual storytelling.</p>
+              <span class="project-status">Artwork coming soon</span>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="poker">
+            <div class="project-art art-poker">
+              <span class="art-symbol" aria-hidden="true">♠</span>
+            </div>
+            <div class="project-info">
+              <div class="project-category">Playing Cards</div>
+              <h3>Poker Card Set</h3>
+              <p>Custom playing card and deck design.</p>
+              <span class="project-status">Artwork coming soon</span>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="oracle">
+            <div class="project-art art-oracle">
+              <span class="art-symbol" aria-hidden="true">✧</span>
+            </div>
+            <div class="project-info">
+              <div class="project-category">Spiritual Art</div>
+              <h3>Oracle Card Set</h3>
+              <p>Symbolic artwork and oracle card concepts.</p>
+              <span class="project-status">Artwork coming soon</span>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="tarot">
+            <div class="project-art art-tarot">
+              <span class="art-symbol" aria-hidden="true">☾</span>
+            </div>
+            <div class="project-info">
+              <div class="project-category">Mystical Illustration</div>
+              <h3>Tarot Card Set</h3>
+              <p>Original tarot illustrations and card artwork.</p>
+              <span class="project-status">Artwork coming soon</span>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="logo">
+            <div class="project-art art-logo">
+              <span class="art-symbol" aria-hidden="true">CS</span>
+            </div>
+            <div class="project-info">
+              <div class="project-category">Brand Identity</div>
+              <h3>Logo Design</h3>
+              <p>Logo concepts and visual identity projects.</p>
+              <span class="project-status">Artwork coming soon</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
     </section>
 
-    <section id="contact">
-      <h2 class="section-title">Let's Create <span class="gradient">Together!</span></h2>
-      <p>Have a project in mind? I would love to hear about it.</p>
-      <a class="btn" href="mailto:YOUR_EMAIL@example.com">Contact Me ✉</a>
-      <p class="notice">Replace the example email with your real contact email.</p>
+    <!-- ABOUT -->
+    <section class="section about-section" id="about">
+      <div class="container about-grid">
+
+        <div class="about-panel">
+          <div class="about-monogram">CS<span>.</span></div>
+          <h3>CS Creative Studio</h3>
+          <p>
+            An independent creative portfolio focused on original
+            visual design, artistic exploration and thoughtful details.
+          </p>
+        </div>
+
+        <div class="about-copy">
+          <p class="section-label">A Little About Me</p>
+          <h2 class="section-title">
+            Creativity with <span class="accent">Purpose.</span>
+          </h2>
+
+          <p>
+            I'm a creative designer passionate about transforming
+            ideas into distinctive visual experiences. My interests
+            include digital artwork, graphic design, packaging,
+            publishing and collectible card illustrations.
+          </p>
+
+          <p>
+            Through CS Creative Studio, I aim to create designs that
+            balance visual appeal, originality and the needs of each
+            individual project.
+          </p>
+
+          <ul class="about-list">
+            <li>Creative and detail-focused design</li>
+            <li>Custom artwork and original concepts</li>
+            <li>Packaging, publishing and card deck design</li>
+            <li>Open to suitable freelance projects</li>
+          </ul>
+        </div>
+
+      </div>
     </section>
+
+    <!-- CONTACT -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+
+        <div class="contact-panel">
+          <p class="section-label">Let's Work Together</p>
+
+          <h2 class="section-title">
+            Have a project in mind?
+          </h2>
+
+          <p class="section-intro">
+            Looking for a creative design for your brand, book,
+            packaging or card deck? Get in touch to discuss your idea.
+          </p>
+
+          <a class="btn btn-primary"
+             href="mailto:YOUR_EMAIL@example.com?subject=Freelance%20Design%20Inquiry">
+            Hire Me / Contact Me ↗
+          </a>
+
+          <div class="contact-details">
+            <div class="contact-item">
+              Freelance Design Inquiries
+            </div>
+            <div class="contact-item">
+              Custom Projects Welcome
+            </div>
+          </div>
+
+          <p class="section-label">Find Me Online</p>
+
+          <div class="social-links">
+            <!-- Replace # with your actual profile URLs -->
+            <a href="#" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a href="#" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="#" target="_blank" rel="noopener noreferrer">Behance</a>
+            <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          </div>
+
+          <p class="contact-note">
+            Please replace the sample email and social links with your
+            own contact details before sharing this website.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
   </main>
 
+  <!-- FOOTER -->
   <footer>
-    © 2026 CS Creative Studio. All rights reserved.
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> CS Creative Studio. All rights reserved.</p>
+      <a href="#home">Back to top ↑</a>
+    </div>
   </footer>
+
+  <script>
+    // Update copyright year automatically
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    // Portfolio category filtering
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const projectCards = document.querySelectorAll(".project-card");
+
+    filterButtons.forEach(function(button) {
+      button.addEventListener("click", function() {
+        const selectedCategory = button.dataset.filter;
+
+        filterButtons.forEach(function(item) {
+          item.classList.remove("active");
+          item.setAttribute("aria-pressed", "false");
+        });
+
+        button.classList.add("active");
+        button.setAttribute("aria-pressed", "true");
+
+        projectCards.forEach(function(card) {
+          const matches =
+            selectedCategory === "all" ||
+            card.dataset.category === selectedCategory;
+
+          card.hidden = !matches;
+        });
+      });
+    });
+  </script>
+
 </body>
 </html>
