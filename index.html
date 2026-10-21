@@ -5,10 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>CS Creative Studio | Creative Design Portfolio</title>
-
-  <meta name="description" content="Explore creative artwork, packaging, book covers, card decks and logo design by CS Creative Studio.">
-
+  <title>Chalitha Shashin Jayawardhana | CS Creative Studio</title>
+  <meta name="description" content="Explore the creative portfolio of Chalitha Shashin Jayawardhana, a graphic designer specializing in digital art, logos, packaging, book covers, poker cards, oracle cards and tarot card design.">
   <meta name="theme-color" content="#0b1020">
 
   <style>
@@ -19,9 +17,8 @@
       --text: #f4f7fc;
       --muted: #a8b3c8;
       --accent: #62e5df;
-      --accent-dark: #1aacae;
-      --border: rgba(255,255,255,0.10);
       --gold: #d9b878;
+      --border: rgba(255,255,255,0.10);
     }
 
     * {
@@ -32,7 +29,7 @@
 
     html {
       scroll-behavior: smooth;
-      scroll-padding-top: 85px;
+      scroll-padding-top: 90px;
     }
 
     body {
@@ -47,10 +44,6 @@
       text-decoration: none;
     }
 
-    button, a {
-      -webkit-tap-highlight-color: transparent;
-    }
-
     button {
       font: inherit;
     }
@@ -61,14 +54,14 @@
     }
 
     .section {
-      padding: 90px 0;
+      padding: 85px 0;
     }
 
     .section-label {
       color: var(--accent);
-      text-transform: uppercase;
       font-size: 12px;
       font-weight: bold;
+      text-transform: uppercase;
       letter-spacing: 3px;
       margin-bottom: 12px;
     }
@@ -76,14 +69,14 @@
     .section-title {
       font-size: clamp(30px, 4vw, 43px);
       line-height: 1.2;
-      margin-bottom: 16px;
       letter-spacing: -1px;
+      margin-bottom: 17px;
     }
 
     .section-intro {
+      max-width: 650px;
       color: var(--muted);
-      max-width: 620px;
-      margin-bottom: 35px;
+      margin-bottom: 32px;
     }
 
     .accent {
@@ -96,8 +89,8 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(11,16,32,0.94);
-      backdrop-filter: blur(16px);
+      background: rgba(11,16,32,0.95);
+      backdrop-filter: blur(15px);
       border-bottom: 1px solid var(--border);
     }
 
@@ -112,8 +105,8 @@
     .brand {
       font-size: 21px;
       font-weight: 800;
-      letter-spacing: -0.7px;
       white-space: nowrap;
+      letter-spacing: -0.7px;
     }
 
     .brand span {
@@ -123,10 +116,10 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 25px;
+      gap: 23px;
       list-style: none;
-      font-size: 13px;
       color: var(--muted);
+      font-size: 13px;
     }
 
     .nav-links a:hover {
@@ -134,10 +127,10 @@
     }
 
     .nav-cta {
-      border: 1px solid var(--accent);
-      color: var(--accent);
-      border-radius: 7px;
       padding: 9px 16px;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      border-radius: 7px;
       font-size: 13px;
       font-weight: bold;
       white-space: nowrap;
@@ -152,16 +145,14 @@
 
     .btn {
       display: inline-flex;
-      justify-content: center;
       align-items: center;
-      gap: 8px;
+      justify-content: center;
       padding: 13px 21px;
       border-radius: 7px;
-      font-weight: bold;
       font-size: 14px;
+      font-weight: bold;
       border: 1px solid var(--accent);
-      transition: 0.2s ease;
-      cursor: pointer;
+      transition: 0.2s;
     }
 
     .btn-primary {
@@ -175,9 +166,9 @@
     }
 
     .btn-outline {
+      background: transparent;
       color: var(--text);
       border-color: var(--border);
-      background: transparent;
     }
 
     .btn-outline:hover {
@@ -188,44 +179,43 @@
     /* HERO */
 
     .hero {
-      position: relative;
+      padding: 105px 0 90px;
       overflow: hidden;
-      padding: 115px 0 100px;
       background:
-        radial-gradient(ellipse at 80% 25%, rgba(48,180,185,0.13), transparent 35%),
-        radial-gradient(ellipse at 15% 85%, rgba(83,101,190,0.12), transparent 40%);
+        radial-gradient(ellipse at 85% 25%, rgba(48,180,185,0.14), transparent 36%),
+        radial-gradient(ellipse at 10% 90%, rgba(83,101,190,0.12), transparent 40%);
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.25fr 0.75fr;
+      grid-template-columns: 1.2fr 0.8fr;
       align-items: center;
-      gap: 55px;
+      gap: 50px;
     }
 
     .hero-badge {
       display: inline-block;
+      padding: 7px 13px;
+      border-radius: 30px;
       border: 1px solid rgba(98,229,223,0.3);
       background: rgba(98,229,223,0.06);
       color: var(--accent);
-      padding: 7px 13px;
-      border-radius: 30px;
       font-size: 12px;
-      margin-bottom: 25px;
-    }
-
-    .hero h1 {
-      font-size: clamp(43px, 6.5vw, 76px);
-      line-height: 1.08;
-      letter-spacing: -3px;
       margin-bottom: 24px;
     }
 
+    .hero h1 {
+      font-size: clamp(42px, 6vw, 72px);
+      line-height: 1.08;
+      letter-spacing: -2.7px;
+      margin-bottom: 23px;
+    }
+
     .hero-description {
-      max-width: 560px;
+      max-width: 580px;
       color: var(--muted);
       font-size: 16px;
-      margin-bottom: 30px;
+      margin-bottom: 29px;
     }
 
     .hero-buttons {
@@ -236,53 +226,51 @@
 
     .hero-note {
       color: var(--muted);
-      font-size: 12px;
-      margin-top: 27px;
+      font-size: 11px;
+      letter-spacing: 1px;
+      margin-top: 26px;
     }
 
     .hero-art {
-      min-height: 330px;
+      min-height: 340px;
+      padding: 25px;
       border: 1px solid var(--border);
       border-radius: 22px;
-      padding: 25px;
-      position: relative;
+      background:
+        radial-gradient(circle at center, rgba(98,229,223,0.14), transparent 48%),
+        linear-gradient(145deg, #172941, #101729);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       overflow: hidden;
-      background:
-        radial-gradient(circle at 50% 40%, rgba(98,229,223,0.16), transparent 42%),
-        linear-gradient(145deg, #172941, #101729 70%);
+      position: relative;
     }
 
     .hero-art::before,
     .hero-art::after {
       content: "";
       position: absolute;
-      border: 1px solid rgba(98,229,223,0.18);
-      border-radius: 50%;
-      width: 230px;
-      height: 230px;
+      top: 45%;
       left: 50%;
-      top: 43%;
       transform: translate(-50%, -50%);
+      width: 235px;
+      height: 235px;
+      border: 1px solid rgba(98,229,223,0.2);
+      border-radius: 50%;
     }
 
     .hero-art::after {
       width: 165px;
       height: 165px;
-      border-color: rgba(217,184,120,0.4);
+      border-color: rgba(217,184,120,0.45);
     }
 
     .hero-symbol {
       position: relative;
       z-index: 1;
-      text-align: center;
       margin: auto;
       font-size: 100px;
-      line-height: 1.2;
       color: var(--gold);
-      text-shadow: 0 0 45px rgba(98,229,223,0.2);
     }
 
     .hero-art-caption {
@@ -291,13 +279,14 @@
       border-top: 1px solid var(--border);
       padding-top: 15px;
       color: var(--muted);
-      font-size: 12px;
+      font-size: 11px;
       letter-spacing: 1px;
     }
 
     /* SKILLS */
 
-    .skills-section {
+    .skills-section,
+    .about-section {
       background: #0e1526;
       border-top: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
@@ -306,7 +295,7 @@
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 15px;
+      gap: 16px;
     }
 
     .skill-card {
@@ -318,13 +307,13 @@
     }
 
     .skill-card:hover {
-      border-color: rgba(98,229,223,0.45);
       transform: translateY(-3px);
+      border-color: rgba(98,229,223,0.5);
     }
 
     .skill-number {
-      font-size: 12px;
       color: var(--accent);
+      font-size: 11px;
       letter-spacing: 2px;
       margin-bottom: 12px;
     }
@@ -341,32 +330,28 @@
 
     /* PORTFOLIO */
 
-    .portfolio-section {
-      background: var(--bg);
-    }
-
     .filters {
       display: flex;
       flex-wrap: wrap;
       gap: 9px;
-      margin-bottom: 32px;
+      margin-bottom: 30px;
     }
 
     .filter-btn {
       border: 1px solid var(--border);
-      color: var(--muted);
       background: var(--surface);
-      border-radius: 30px;
+      color: var(--muted);
       padding: 9px 15px;
+      border-radius: 30px;
       cursor: pointer;
       font-size: 12px;
     }
 
     .filter-btn:hover,
     .filter-btn.active {
-      color: #07131d;
       background: var(--accent);
       border-color: var(--accent);
+      color: #07131d;
     }
 
     .portfolio-grid {
@@ -381,7 +366,7 @@
       border: 1px solid var(--border);
       border-radius: 13px;
       background: var(--surface);
-      transition: transform 0.25s, border-color 0.25s;
+      transition: 0.25s;
     }
 
     .project-card:hover {
@@ -409,7 +394,7 @@
       position: absolute;
       width: 135px;
       height: 135px;
-      border: 1px solid rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.2);
       border-radius: 50%;
     }
 
@@ -422,8 +407,7 @@
       position: relative;
       z-index: 1;
       font-size: 65px;
-      line-height: 1;
-      text-shadow: 0 5px 30px rgba(0,0,0,0.25);
+      line-height: 1.2;
     }
 
     .art-box {
@@ -468,46 +452,40 @@
     }
 
     .project-info p {
-      font-size: 13px;
       color: var(--muted);
+      font-size: 13px;
     }
 
     .project-status {
       display: inline-block;
-      color: var(--muted);
-      font-size: 10px;
+      margin-top: 13px;
+      padding: 4px 9px;
       border: 1px solid var(--border);
       border-radius: 20px;
-      padding: 4px 9px;
-      margin-top: 13px;
+      color: var(--muted);
+      font-size: 10px;
     }
 
     /* ABOUT */
 
-    .about-section {
-      background: #0e1526;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-    }
-
     .about-grid {
       display: grid;
       grid-template-columns: 0.8fr 1.2fr;
-      gap: 55px;
       align-items: start;
+      gap: 50px;
     }
 
     .about-panel {
       padding: 30px;
-      border-radius: 16px;
       border: 1px solid var(--border);
+      border-radius: 16px;
       background:
         radial-gradient(circle at top right, rgba(98,229,223,0.1), transparent 45%),
         var(--surface);
     }
 
     .about-monogram {
-      font-size: 48px;
+      font-size: 52px;
       font-weight: 800;
       letter-spacing: -3px;
       margin-bottom: 15px;
@@ -517,6 +495,17 @@
       color: var(--accent);
     }
 
+    .about-panel h3 {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    .about-panel .role {
+      color: var(--accent);
+      font-size: 13px;
+      margin-bottom: 18px;
+    }
+
     .about-panel p,
     .about-copy p {
       color: var(--muted);
@@ -524,12 +513,12 @@
     }
 
     .about-copy p {
-      margin-bottom: 17px;
+      margin-bottom: 16px;
     }
 
     .about-list {
       list-style: none;
-      margin-top: 22px;
+      margin-top: 20px;
       display: grid;
       gap: 12px;
     }
@@ -541,8 +530,8 @@
     .about-list li::before {
       content: "✓";
       color: var(--accent);
-      margin-right: 11px;
       font-weight: bold;
+      margin-right: 10px;
     }
 
     /* CONTACT */
@@ -554,10 +543,10 @@
     }
 
     .contact-panel {
+      padding: clamp(25px, 5vw, 55px);
       border: 1px solid var(--border);
       background: var(--surface);
       border-radius: 18px;
-      padding: clamp(25px, 5vw, 55px);
       text-align: center;
     }
 
@@ -575,11 +564,18 @@
     }
 
     .contact-item {
+      display: inline-block;
       border: 1px solid var(--border);
-      padding: 12px 17px;
+      padding: 12px 16px;
       border-radius: 8px;
       font-size: 13px;
       color: var(--muted);
+      overflow-wrap: anywhere;
+    }
+
+    a.contact-item:hover {
+      border-color: var(--accent);
+      color: var(--accent);
     }
 
     .social-links {
@@ -587,13 +583,13 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 12px;
-      margin-top: 28px;
+      margin-top: 25px;
     }
 
     .social-links a {
+      padding: 9px 15px;
       border: 1px solid var(--border);
       border-radius: 7px;
-      padding: 9px 15px;
       color: var(--muted);
       font-size: 12px;
       transition: 0.2s;
@@ -605,8 +601,8 @@
     }
 
     .contact-note {
-      font-size: 12px;
       color: var(--muted);
+      font-size: 12px;
       margin-top: 20px;
     }
 
@@ -670,7 +666,6 @@
 
       .nav-inner {
         padding: 14px 0;
-        align-items: flex-start;
         flex-wrap: wrap;
       }
 
@@ -687,11 +682,11 @@
       }
 
       .hero {
-        padding: 75px 0 65px;
+        padding: 70px 0 60px;
       }
 
       .hero h1 {
-        letter-spacing: -2px;
+        letter-spacing: -1.8px;
       }
 
       .hero-description {
@@ -728,7 +723,10 @@
   <!-- NAVIGATION -->
   <header class="navbar">
     <div class="container nav-inner">
-      <a class="brand" href="#home">CS <span>CREATIVE</span></a>
+
+      <a class="brand" href="#home">
+        CS <span>CREATIVE</span>
+      </a>
 
       <nav aria-label="Main navigation">
         <ul class="nav-links">
@@ -740,10 +738,11 @@
         </ul>
       </nav>
 
-      <!-- Replace YOUR_EMAIL@example.com with your real email -->
-      <a class="nav-cta" href="mailto:YOUR_EMAIL@example.com?subject=Design%20Inquiry">
+      <a class="nav-cta"
+         href="mailto:shashinchalitha4@gmail.com?subject=Design%20Inquiry">
         Hire Me ↗
       </a>
+
     </div>
   </header>
 
@@ -754,7 +753,9 @@
       <div class="container hero-grid">
 
         <div>
-          <span class="hero-badge">CREATIVE DESIGN PORTFOLIO</span>
+          <span class="hero-badge">
+            CREATIVE DESIGN PORTFOLIO
+          </span>
 
           <h1>
             Creative Designs.<br>
@@ -762,9 +763,10 @@
           </h1>
 
           <p class="hero-description">
-            Welcome to CS Creative Studio — a creative space for
-            distinctive visual design, book covers, product packaging,
-            collectible card decks and original logo concepts.
+            Hello, I'm Chalitha Shashin Jayawardhana, a professional
+            graphic designer passionate about creating distinctive
+            visual experiences. Explore my work in digital art,
+            branding, packaging, book covers and collectible card decks.
           </p>
 
           <div class="hero-buttons">
@@ -773,20 +775,20 @@
             </a>
 
             <a class="btn btn-outline"
-               href="mailto:YOUR_EMAIL@example.com?subject=Design%20Inquiry">
+               href="mailto:shashinchalitha4@gmail.com?subject=Design%20Inquiry">
               Hire Me
             </a>
           </div>
 
           <p class="hero-note">
-            DIGITAL ART · GRAPHIC DESIGN · CARD DECKS · BRANDING
+            GRAPHIC DESIGN · DIGITAL ART · PACKAGING · CARD DECKS
           </p>
         </div>
 
-        <div class="hero-art" aria-label="Creative Studio decorative artwork">
+        <div class="hero-art">
           <div class="hero-symbol">✳</div>
           <div class="hero-art-caption">
-            IDEAS INTO VISUAL EXPERIENCES
+            CS CREATIVE STUDIO · IDEAS INTO VISUAL EXPERIENCES
           </div>
         </div>
 
@@ -799,6 +801,7 @@
 
         <p class="section-label">What I Create</p>
         <h2 class="section-title">My Creative Skills</h2>
+
         <p class="section-intro">
           Creative design solutions for distinctive projects,
           meaningful ideas and memorable visual experiences.
@@ -809,7 +812,7 @@
           <article class="skill-card">
             <div class="skill-number">01 / PACKAGING</div>
             <h3>Die-Cut Box Design</h3>
-            <p>Creative packaging artwork and box design concepts.</p>
+            <p>Creative packaging artwork and product box design concepts.</p>
           </article>
 
           <article class="skill-card">
@@ -827,19 +830,19 @@
           <article class="skill-card">
             <div class="skill-number">04 / ORACLE</div>
             <h3>Oracle Card Design</h3>
-            <p>Distinctive oracle card illustrations and deck artwork.</p>
+            <p>Distinctive oracle illustrations and deck artwork.</p>
           </article>
 
           <article class="skill-card">
             <div class="skill-number">05 / TAROT</div>
             <h3>Tarot Card Design</h3>
-            <p>Fantasy-inspired tarot illustrations and card sets.</p>
+            <p>Original tarot illustrations and fantasy-inspired card artwork.</p>
           </article>
 
           <article class="skill-card">
             <div class="skill-number">06 / BRANDING</div>
             <h3>Logo Design</h3>
-            <p>Original logo concepts and visual brand identities.</p>
+            <p>Original logo concepts and visual brand identity design.</p>
           </article>
 
         </div>
@@ -847,34 +850,42 @@
     </section>
 
     <!-- PORTFOLIO -->
-    <section class="section portfolio-section" id="portfolio">
+    <section class="section" id="portfolio">
       <div class="container">
 
         <p class="section-label">Selected Projects</p>
         <h2 class="section-title">My Portfolio</h2>
+
         <p class="section-intro">
-          Explore my creative projects by category. Artwork images
-          will be added here as the portfolio develops.
+          Explore my creative work by category. My original
+          project images will be displayed here as they are added.
         </p>
 
-        <div class="filters" role="group" aria-label="Filter portfolio projects">
-          <button class="filter-btn active" data-filter="all" aria-pressed="true">All Projects</button>
-          <button class="filter-btn" data-filter="box" aria-pressed="false">Box Design</button>
-          <button class="filter-btn" data-filter="book" aria-pressed="false">Book Covers</button>
-          <button class="filter-btn" data-filter="poker" aria-pressed="false">Poker Cards</button>
-          <button class="filter-btn" data-filter="oracle" aria-pressed="false">Oracle Cards</button>
-          <button class="filter-btn" data-filter="tarot" aria-pressed="false">Tarot Cards</button>
-          <button class="filter-btn" data-filter="logo" aria-pressed="false">Logo Design</button>
+        <div class="filters" role="group" aria-label="Portfolio filters">
+          <button class="filter-btn active" data-filter="all"
+                  aria-pressed="true">All Projects</button>
+          <button class="filter-btn" data-filter="box"
+                  aria-pressed="false">Box Design</button>
+          <button class="filter-btn" data-filter="book"
+                  aria-pressed="false">Book Covers</button>
+          <button class="filter-btn" data-filter="poker"
+                  aria-pressed="false">Poker Cards</button>
+          <button class="filter-btn" data-filter="oracle"
+                  aria-pressed="false">Oracle Cards</button>
+          <button class="filter-btn" data-filter="tarot"
+                  aria-pressed="false">Tarot Cards</button>
+          <button class="filter-btn" data-filter="logo"
+                  aria-pressed="false">Logo Design</button>
         </div>
 
         <div class="portfolio-grid">
 
           <article class="project-card" data-category="box">
             <div class="project-art art-box">
-              <span class="art-symbol" aria-hidden="true">◇</span>
+              <span class="art-symbol">◇</span>
             </div>
             <div class="project-info">
-              <div class="project-category">Packaging</div>
+              <div class="project-category">Packaging Design</div>
               <h3>Die-Cut Box Design</h3>
               <p>Product packaging and creative box artwork.</p>
               <span class="project-status">Artwork coming soon</span>
@@ -883,19 +894,19 @@
 
           <article class="project-card" data-category="book">
             <div class="project-art art-book">
-              <span class="art-symbol" aria-hidden="true">▤</span>
+              <span class="art-symbol">▤</span>
             </div>
             <div class="project-info">
               <div class="project-category">Publishing</div>
               <h3>Book Cover Design</h3>
-              <p>Book cover concepts and visual storytelling.</p>
+              <p>Book covers and visual storytelling.</p>
               <span class="project-status">Artwork coming soon</span>
             </div>
           </article>
 
           <article class="project-card" data-category="poker">
             <div class="project-art art-poker">
-              <span class="art-symbol" aria-hidden="true">♠</span>
+              <span class="art-symbol">♠</span>
             </div>
             <div class="project-info">
               <div class="project-category">Playing Cards</div>
@@ -907,19 +918,19 @@
 
           <article class="project-card" data-category="oracle">
             <div class="project-art art-oracle">
-              <span class="art-symbol" aria-hidden="true">✧</span>
+              <span class="art-symbol">✧</span>
             </div>
             <div class="project-info">
-              <div class="project-category">Spiritual Art</div>
+              <div class="project-category">Oracle Art</div>
               <h3>Oracle Card Set</h3>
-              <p>Symbolic artwork and oracle card concepts.</p>
+              <p>Symbolic illustrations and oracle card concepts.</p>
               <span class="project-status">Artwork coming soon</span>
             </div>
           </article>
 
           <article class="project-card" data-category="tarot">
             <div class="project-art art-tarot">
-              <span class="art-symbol" aria-hidden="true">☾</span>
+              <span class="art-symbol">☾</span>
             </div>
             <div class="project-info">
               <div class="project-category">Mystical Illustration</div>
@@ -931,7 +942,7 @@
 
           <article class="project-card" data-category="logo">
             <div class="project-art art-logo">
-              <span class="art-symbol" aria-hidden="true">CS</span>
+              <span class="art-symbol">CS</span>
             </div>
             <div class="project-info">
               <div class="project-category">Brand Identity</div>
@@ -945,43 +956,68 @@
       </div>
     </section>
 
-    <!-- ABOUT -->
+    <!-- ABOUT ME -->
     <section class="section about-section" id="about">
       <div class="container about-grid">
 
         <div class="about-panel">
           <div class="about-monogram">CS<span>.</span></div>
-          <h3>CS Creative Studio</h3>
+
+          <h3>Chalitha Shashin Jayawardhana</h3>
+
+          <p class="role">Professional Graphic Designer</p>
+
           <p>
-            An independent creative portfolio focused on original
-            visual design, artistic exploration and thoughtful details.
+            Creative design, original artwork and visual storytelling
+            through CS Creative Studio.
           </p>
+
+          <div style="margin-top: 24px;">
+            <a class="btn btn-primary"
+               href="mailto:shashinchalitha4@gmail.com?subject=Design%20Inquiry">
+              Work With Me ↗
+            </a>
+          </div>
         </div>
 
         <div class="about-copy">
-          <p class="section-label">A Little About Me</p>
+          <p class="section-label">About Me</p>
+
           <h2 class="section-title">
             Creativity with <span class="accent">Purpose.</span>
           </h2>
 
           <p>
-            I'm a creative designer passionate about transforming
-            ideas into distinctive visual experiences. My interests
-            include digital artwork, graphic design, packaging,
-            publishing and collectible card illustrations.
+            I'm Chalitha Shashin Jayawardhana, a professional graphic
+            designer passionate about creating visually compelling
+            designs that combine creativity, detail and purpose.
           </p>
 
           <p>
-            Through CS Creative Studio, I aim to create designs that
-            balance visual appeal, originality and the needs of each
-            individual project.
+            My creative work includes digital art, logo design,
+            packaging design, book covers, poker card sets, oracle
+            cards and tarot card illustrations. I enjoy exploring
+            distinctive visual styles and transforming ideas into
+            polished creative designs.
+          </p>
+
+          <p>
+            Through CS Creative Studio, I aim to deliver thoughtful,
+            original and visually engaging design solutions for
+            individuals, brands and creative projects.
+          </p>
+
+          <p>
+            I'm open to freelance opportunities and collaborations
+            where I can help bring creative ideas to life.
           </p>
 
           <ul class="about-list">
-            <li>Creative and detail-focused design</li>
-            <li>Custom artwork and original concepts</li>
-            <li>Packaging, publishing and card deck design</li>
-            <li>Open to suitable freelance projects</li>
+            <li>Professional Graphic Design</li>
+            <li>Logo and Brand Identity Design</li>
+            <li>Packaging and Book Cover Design</li>
+            <li>Poker, Oracle and Tarot Card Design</li>
+            <li>Digital Art and Creative Illustration</li>
           </ul>
         </div>
 
@@ -1001,36 +1037,46 @@
 
           <p class="section-intro">
             Looking for a creative design for your brand, book,
-            packaging or card deck? Get in touch to discuss your idea.
+            packaging or card deck? Contact me to discuss your idea.
           </p>
 
           <a class="btn btn-primary"
-             href="mailto:YOUR_EMAIL@example.com?subject=Freelance%20Design%20Inquiry">
-            Hire Me / Contact Me ↗
+             href="mailto:shashinchalitha4@gmail.com?subject=Freelance%20Design%20Inquiry">
+            Hire Me / Email Me ↗
           </a>
 
           <div class="contact-details">
-            <div class="contact-item">
-              Freelance Design Inquiries
-            </div>
-            <div class="contact-item">
-              Custom Projects Welcome
-            </div>
+            <a class="contact-item"
+               href="mailto:shashinchalitha4@gmail.com">
+              Email: shashinchalitha4@gmail.com
+            </a>
+
+            <a class="contact-item"
+               href="tel:+94787895850">
+              Phone: 0787895850
+            </a>
           </div>
 
           <p class="section-label">Find Me Online</p>
 
           <div class="social-links">
             <!-- Replace # with your actual profile URLs -->
-            <a href="#" target="_blank" rel="noopener noreferrer">Facebook</a>
-            <a href="#" target="_blank" rel="noopener noreferrer">Instagram</a>
-            <a href="#" target="_blank" rel="noopener noreferrer">Behance</a>
-            <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="#" target="_blank"
+               rel="noopener noreferrer">Facebook</a>
+
+            <a href="#" target="_blank"
+               rel="noopener noreferrer">Instagram</a>
+
+            <a href="#" target="_blank"
+               rel="noopener noreferrer">Behance</a>
+
+            <a href="#" target="_blank"
+               rel="noopener noreferrer">LinkedIn</a>
           </div>
 
           <p class="contact-note">
-            Please replace the sample email and social links with your
-            own contact details before sharing this website.
+            For design inquiries, freelance projects and collaborations,
+            please contact me by email or phone.
           </p>
         </div>
 
@@ -1042,23 +1088,27 @@
   <!-- FOOTER -->
   <footer>
     <div class="container footer-inner">
-      <p>© <span id="year"></span> CS Creative Studio. All rights reserved.</p>
+      <p>
+        © <span id="year"></span>
+        Chalitha Shashin Jayawardhana · CS Creative Studio
+      </p>
+
       <a href="#home">Back to top ↑</a>
     </div>
   </footer>
 
   <script>
-    // Update copyright year automatically
+    // Copyright year
     document.getElementById("year").textContent =
       new Date().getFullYear();
 
-    // Portfolio category filtering
+    // Portfolio filters
     const filterButtons = document.querySelectorAll(".filter-btn");
     const projectCards = document.querySelectorAll(".project-card");
 
     filterButtons.forEach(function(button) {
       button.addEventListener("click", function() {
-        const selectedCategory = button.dataset.filter;
+        const category = button.dataset.filter;
 
         filterButtons.forEach(function(item) {
           item.classList.remove("active");
@@ -1069,11 +1119,11 @@
         button.setAttribute("aria-pressed", "true");
 
         projectCards.forEach(function(card) {
-          const matches =
-            selectedCategory === "all" ||
-            card.dataset.category === selectedCategory;
+          const show =
+            category === "all" ||
+            card.dataset.category === category;
 
-          card.hidden = !matches;
+          card.hidden = !show;
         });
       });
     });
