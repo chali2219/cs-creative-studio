@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Die-Cut Box Design | CS Creative Studio</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 30px 20px;
+      background: #07111f;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      max-width: 1100px;
+      margin: auto;
+    }
+    a { color: #48e5ef; text-decoration: none; }
+    h1 { margin-bottom: 10px; }
+    .intro { color: #b7c6d8; margin-bottom: 30px; }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .gallery img {
+      width: 100%;
+      height: 280px;
+      object-fit: contain;
+      background: #101e30;
+      border: 1px solid #24435a;
+      border-radius: 12px;
+      padding: 10px;
+      cursor: pointer;
+    }
+    .gallery img:hover { border-color: #48e5ef; }
+    #viewer {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.92);
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      z-index: 10;
+    }
+    #viewer img {
+      max-width: 95%;
+      max-height: 90vh;
+      object-fit: contain;
+    }
+    #close {
+      position: absolute;
+      top: 15px;
+      right: 25px;
+      font-size: 36px;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <a href="index.html">← Back to Portfolio</a>
+    <h1>Die-Cut Box Design</h1>
+    <p class="intro">Packaging design projects by CS Creative Studio.</p>
+
+    <div class="gallery">
+      <img src="box-design-01.jpg.jpg"
+           alt="Die-Cut Box Design 1"
+           onclick="showImage(this.src)">
+      <img src="box-design-02.jpg.jpg"
+           alt="Die-Cut Box Design 2"
+           onclick="showImage(this.src)">
+    </div>
+  </main>
+
+  <div id="viewer" onclick="hideImage()">
+    <span id="close">&times;</span>
+    <img id="largeImage" src="" alt="Enlarged box design">
+  </div>
+
+  <script>
+    function showImage(src) {
+      document.getElementById('largeImage').src = src;
+      document.getElementById('viewer').style.display = 'flex';
+    }
+    function hideImage() {
+      document.getElementById('viewer').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
