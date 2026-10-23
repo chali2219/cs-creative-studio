@@ -1049,11 +1049,10 @@
             packaging or card deck? Contact me to discuss your idea.
           </p>
 
-          <a class="btn btn-primary"
-             href="mailto:shashinchalitha4@gmail.com?subject=Freelance%20Design%20Inquiry">
-            Hire Me / Email Me ↗
-          </a>
 
+<a class="btn btn-primary" href="#contact-form">
+  Hire Me / Email Me ↗
+</a>
           <div class="contact-details">
             <a class="contact-item"
                href="mailto:shashinchalitha4@gmail.com">
@@ -1067,6 +1066,33 @@
           </div>
 
           <p class="section-label">Find Me Online</p>
+
+          <div id="contact-form" style="margin-top:30px;">
+            <h3>Send Me a Message</h3>
+
+            <form action="https://api.web3forms.com/submit" method="POST">
+              <input type="hidden" name="access_key" value="c7d13d18-8e48-48ff-9ba2-c7ad02a6aedc">
+              <input type="hidden" name="subject" value="New CS Creative Studio Design Inquiry">
+              <input type="hidden" name="from_name" value="CS Creative Studio Website">
+
+              <label for="client-name">Your Name</label>
+              <input id="client-name" type="text" name="name" required
+                placeholder="Enter your name"
+                style="display:block;width:100%;box-sizing:border-box;padding:12px;margin:8px 0 16px;border-radius:8px;border:1px solid #777;background:#222;color:white;">
+
+              <label for="client-email">Your Email</label>
+              <input id="client-email" type="email" name="email" required
+                placeholder="Enter your email"
+                style="display:block;width:100%;box-sizing:border-box;padding:12px;margin:8px 0 16px;border-radius:8px;border:1px solid #777;background:#222;color:white;">
+
+              <label for="project-message">Your Message</label>
+              <textarea id="project-message" name="message" rows="5" required
+                placeholder="Tell me about your design project"
+                style="display:block;width:100%;box-sizing:border-box;padding:12px;margin:8px 0 16px;border-radius:8px;border:1px solid #777;background:#222;color:white;"></textarea>
+
+              <button class="btn btn-primary" type="submit">Send Message ↗</button>
+            </form>
+          </div>
 
           <div class="social-links">
             <!-- Replace # with your actual profile URLs -->
